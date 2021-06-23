@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+#app{
+    text-align: center;
+    width: 50%;
+    margin: 10px auto;
+}
+
+img{
+    margin: 20px 0;
+}
+
+.input-row > *{
+    margin: 0 20px;
+    padding: 5px;
+}
+
+ul{
+    margin: 30px 0;
+    padding: 5px;
+    list-style: none;
+    border-radius: 10px;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    padding: 5px;
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    background-color:lightcoral;
+}
+
+li > *{
+    margin: 0 20px;
+}
+
+li:hover{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+li > i{
+
+}
