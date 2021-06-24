@@ -16,16 +16,18 @@
         <h1>Todo List</h1>
         <img src="img/image.jpg" alt="image todo list">
         <div class="input-row">
-            <input type="text" v-model="task" name="activity" id="activity" placeholder="Inserire un'attività">
-            <button @click="addTodo">Aggiungi</button>
+            <input type="text" v-model="task" @keyup.enter="addTask" name="activity" id="activity" placeholder="Inserire un'attività">
+            <button @click="addTask">Aggiungi</button>
         </div>
 
-        <ul>
-            <li v-for="(item, index) in todoList" :key="index">
+        <ul v-if="todoList.length > 0">
+            <li v-for="(item, index) in todoList">
                 <span>{{item}}</span>
-                <i class="fas fa-times"></i>
+                <i @click="removeTask(index)" class="fas fa-times"></i>
             </li>
         </ul>
+
+        <p v-else>NON CI SONO ATTIVITA'</p>
         
     </div>
     
